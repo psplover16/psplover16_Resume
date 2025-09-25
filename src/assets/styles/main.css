@@ -1,0 +1,72 @@
+/* Import fonts */
+@import '../fonts/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  }
+
+  /* 標題字體優化 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    letter-spacing: -0.025em;
+  }
+
+  /* 代碼字體 */
+  code, pre {
+    @apply font-mono;
+  }
+
+  /* 改善中文字體渲染 */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+
+  /* 統一卡片高度樣式 */
+  .card-fixed-height {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200 h-full flex flex-col;
+  }
+
+  .card-skill {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200 h-64 flex flex-col;
+  }
+
+  .card-project {
+    @apply bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col;
+  }
+
+  .card-effect {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-between;
+  }
+
+  .section-title {
+    @apply text-3xl font-heading font-bold text-gray-800 mb-8 text-center;
+    letter-spacing: -0.025em;
+  }
+}

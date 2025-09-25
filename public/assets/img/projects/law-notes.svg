@@ -1,0 +1,10 @@
+<!-- 刑事筆記 - 佔位圖 -->
+<svg width="400" height="225" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#7c3aed"/>
+  <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
+    刑事筆記
+  </text>
+  <text x="50%" y="65%" text-anchor="middle" fill="white" font-size="12" font-family="Arial">
+    PHP + MySQL + Bootstrap
+  </text>
+</svg>
