@@ -188,6 +188,25 @@ export const usePersonalStore = defineStore('personal', {
     skillsByCategory: state => category => {
       return state.skills.filter(skill => skill.category === category);
     },
+
+    // 首頁展示的核心技能（指定順序）
+    getFeaturedSkills: state => {
+      const featuredSkillNames = [
+        'Vue.js',
+        'Vite',
+        'Tailwind CSS',
+        'Bootstrap',
+        'JavaScript',
+        'Unity',
+        'PHP',
+        'Git'
+      ];
+      
+      // 按照指定順序返回技能，如果找不到則跳過
+      return featuredSkillNames
+        .map(name => state.skills.find(skill => skill.name === name))
+        .filter(skill => skill !== undefined);
+    },
   },
 
   actions: {

@@ -270,7 +270,7 @@
                 </svg>
                 送出中...
               </span>
-              <span v-else>發送訊息</span>
+              <span v-else>發送訊息 (無串接API)</span>
             </button>
           </form>
 

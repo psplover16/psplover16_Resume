@@ -129,10 +129,8 @@
   const personalStore = usePersonalStore();
   const personalInfo = computed(() => personalStore.personalInfo);
 
-  // 取得頂級技能（前8個）
-  const topSkills = computed(() =>
-    [...personalStore.skills].sort((a, b) => b.level - a.level).slice(0, 8)
-  );
+  // 取得指定的核心技能（按指定順序）
+  const topSkills = computed(() => personalStore.getFeaturedSkills);
 
   // 圖片錯誤處理
   const handleImageError = event => {
