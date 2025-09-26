@@ -29,60 +29,6 @@
         </div>
       </div>
 
-      <!-- 學歷背景 -->
-      <div class="mt-20">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">教育背景</h2>
-          <div class="w-24 h-1 bg-primary-500 mx-auto rounded"></div>
-        </div>
-
-        <div
-          class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500"
-        >
-          <div
-            class="flex flex-col md:flex-row items-start md:items-center justify-between"
-          >
-            <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                <i class="fas fa-graduation-cap text-green-500 mr-3"></i>
-                大學學歷
-              </h3>
-              <p class="text-lg text-gray-600 mb-4">
-                在大學期間奠定了紮實的程式設計基礎，並透過多個專案實作累積實務經驗。
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full"
-                >
-                  程式設計
-                </span>
-                <span
-                  class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full"
-                >
-                  資料結構
-                </span>
-                <span
-                  class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full"
-                >
-                  軟體工程
-                </span>
-                <span
-                  class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full"
-                >
-                  網頁設計
-                </span>
-              </div>
-            </div>
-            <div class="mt-6 md:mt-0 md:ml-8">
-              <div class="text-center p-4 bg-green-50 rounded-lg">
-                <i class="fas fa-certificate text-green-500 text-3xl mb-2"></i>
-                <p class="text-sm font-semibold text-green-700">學士學位</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- 技能進展總覽 -->
       <div class="mt-20">
         <div class="text-center mb-12">

@@ -68,7 +68,7 @@
             <i
               class="fas fa-trophy text-yellow-500 mr-2 sm:mr-3 text-sm sm:text-base"
             ></i>
-            <span class="text-sm sm:text-base">主要成就</span>
+            <span class="text-sm sm:text-base">主要工作</span>
           </h5>
           <ul class="space-y-1 sm:space-y-2">
             <li
