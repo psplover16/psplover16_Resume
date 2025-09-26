@@ -49,182 +49,10 @@
       </section>
 
       <!-- 教育背景 -->
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-8 text-center font-heading">教育背景</h2>
-        <div class="card max-w-2xl mx-auto">
-          <div class="flex items-start space-x-6">
-            <div class="flex-shrink-0">
-              <div
-                class="w-16 h-16 bg-white rounded-full flex items-center justify-center border-2 border-blue-200 shadow-sm"
-              >
-                <!-- 銘傳大學校徽 -->
-                <img 
-                  :src="mcuLogo" 
-                  alt="銘傳大學校徽"
-                  class="w-12 h-12 object-contain"
-                  @error="handleLogoError"
-                />
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                <h3 class="text-xl font-semibold font-heading">銘傳大學</h3>
-                <span class="text-sm text-primary-600 font-medium">2018 - 2022</span>
-              </div>
-              <p class="text-primary-600 font-medium mb-3">
-                企業管理學系 及 法律學系 雙主修 學士學位
-              </p>
-              <div class="space-y-2 text-gray-600 font-sans">
-                <p class="leading-relaxed">
-                  在學期間主修企業管理，培養了商業思維與管理能力，同時輔修法律系，
-                  深入學習刑法、民法等相關法律知識，並建立了「刑事筆記」網站分享學習心得。
-                </p>
-                <div class="mt-4">
-                  <h4 class="font-semibold mb-2 text-gray-800">主要學習領域：</h4>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-primary-500 rounded-full"></div>
-                      <span>企業管理與組織行為</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-primary-500 rounded-full"></div>
-                      <span>刑法與民法實務</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-primary-500 rounded-full"></div>
-                      <span>行銷管理與策略規劃</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-primary-500 rounded-full"></div>
-                      <span>法律邏輯與分析思維</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-4 p-3 bg-blue-50 rounded-lg">
-                  <p class="text-sm text-blue-800">
-                    <strong>特殊成就：</strong>結合法律專業知識，開發「刑事筆記」學習平台，
-                    運用程式技術分享法律學習心得，展現跨領域整合能力。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <EducationSection />
 
       <!-- 專業經歷 -->
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-8 text-center">專案經歷</h2>
-        <div class="space-y-8">
-          <!-- 經歷項目 -->
-          <div class="card">
-            <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0">
-                <div
-                  class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold">網頁開發專案</h3>
-                <p class="text-primary-600 font-medium">
-                  一頁式網站、企業官網開發
-                </p>
-                <p class="text-gray-600 mt-2">
-                  開發響應式網頁應用程式，使用現代前端技術如 Vue.js、Tailwind
-                  CSS， 並實現 RWD 設計，確保在各種裝置上都有良好的使用體驗。
-                </p>
-                <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
-                  <li>使用 Tailwind CSS 與傳統 CSS 兩種方式進行切版</li>
-                  <li>實現響應式設計，支援多種裝置</li>
-                  <li>優化網站效能與使用者體驗</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0">
-                <div
-                  class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    class="w-6 h-6 text-green-600"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold">全端網站開發</h3>
-                <p class="text-primary-600 font-medium">刑事筆記平台</p>
-                <p class="text-gray-600 mt-2">
-                  建立完整的內容管理系統，包含前後端開發、資料庫設計、API
-                  設計等， 提供使用者友善的學習筆記分享平台。
-                </p>
-                <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
-                  <li>使用 PHP + MySQL 建置後端系統</li>
-                  <li>Bootstrap + jQuery 前端框架</li>
-                  <li>API 設計與串接</li>
-                  <li>RWD 響應式設計</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0">
-                <div
-                  class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    class="w-6 h-6 text-purple-600"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold">遊戲開發專案</h3>
-                <p class="text-primary-600 font-medium">武士地下城</p>
-                <p class="text-gray-600 mt-2">
-                  使用 Unity 引擎開發的 2D RPG 遊戲，包含完整的遊戲系統設計，
-                  如戰鬥系統、物品系統、商店系統等。
-                </p>
-                <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
-                  <li>Unity + C# 遊戲開發</li>
-                  <li>遊戲系統設計與實作</li>
-                  <li>UI/UX 設計</li>
-                  <li>遊戲企劃與腳本撰寫</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ExperienceSection />
 
       <!-- 興趣與愛好 -->
       <section class="mb-16">
@@ -310,7 +138,8 @@
 <script setup>
   import { computed } from 'vue';
   import { usePersonalStore } from '@/stores/personalStore';
-  import mcuLogo from '@/assets/img/icons/mingchun.png';
+  import ExperienceSection from '@/components/ExperienceSection.vue';
+  import EducationSection from '@/components/EducationSection.vue';
 
   const personalStore = usePersonalStore();
   const personalInfo = computed(() => personalStore.personalInfo);
@@ -320,12 +149,5 @@
     const img = event.target;
     img.src =
       'https://via.placeholder.com/400x300/e2e8f0/64748b?text=Image+Not+Found';
-  };
-
-  // 校徽載入錯誤處理
-  const handleLogoError = event => {
-    const img = event.target;
-    // 備用校徽 SVG 或使用通用教育圖標
-    img.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%230ea5e9"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/></svg>';
   };
 </script>

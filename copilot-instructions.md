@@ -29,6 +29,7 @@
 ## API 呼叫
 
 - 統一使用 axios，不使用 fetch
+- API的使用需有防衛式程式碼
 - API 基底網址統一存放在常數，例如：`API_BASE_URL`
 - 所有 API 方法需放在 `/src/api/` 目錄下，檔案命名與資源對應，例如：`userApi.js`
 
