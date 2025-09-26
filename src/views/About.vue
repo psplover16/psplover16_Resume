@@ -37,12 +37,6 @@
                 class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
                 @error="handleImageError"
               />
-              <div
-                class="absolute -bottom-6 -right-6 w-24 h-24 bg-primary-100 rounded-2xl -z-10"
-              ></div>
-              <div
-                class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-100 rounded-2xl -z-10"
-              ></div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <section class="mb-16">
-    <h2 class="text-2xl font-bold mb-8 text-center font-heading">經歷</h2>
+    <h2 class="text-2xl font-bold mb-8 text-center font-heading">學習經歷</h2>
     <div class="space-y-8">
       <!-- 使用 v-for 循環渲染經歷項目 -->
       <div v-for="(experience, index) in experiences" :key="index" class="card">
@@ -9,13 +9,22 @@
             <div
               :class="`w-12 h-12 ${experience.iconBg} rounded-full flex items-center justify-center`"
             >
+              <!-- 如果有 SVG 圖示就顯示 SVG -->
               <svg
-                :class="`w-6 h-6 ${experience.iconColor}`"
+                v-if="experience.iconSvg"
+                :class="`w-full h-full ${experience.iconColor}`"
                 fill="currentColor"
-                viewBox="0 0 20 20"
-                v-html="experience.iconSvg"
-              ></svg>
-              <img :src="experience.iconImg" class="w-full object-contain" />
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path :d="experience.iconSvg" />
+              </svg>
+              <!-- 如果有圖片就顯示圖片 -->
+              <img
+                v-if="experience.iconImg"
+                :src="experience.iconImg"
+                class="w-full object-contain"
+              />
             </div>
           </div>
           <div class="flex-1">
@@ -24,7 +33,7 @@
                 {{ experience.title }}
               </h3>
               <h1 class="text-base font-semibold font-heading">
-                {{ experience.title }}
+                {{ experience.time }}
               </h1>
             </div>
             <p class="text-primary-600 font-medium">
@@ -49,13 +58,109 @@
 
 <script setup>
   import { ref } from 'vue';
-  import { fia, joyGame, taiwanJob, tendasoft } from '@/utils/profileImages.js';
+  import taiwanJob from '@/assets/img/profile/taiwanJob.png';
+  import unityLogo from '@/assets/img/icons/unity.svg';
+  import cocosLogo from '@/assets/img/icons/cocos.svg';
 
   // 專案經歷數據
   const experiences = ref([
     {
+      title: '職訓局-物聯網應用設計',
+      time: '2023/12 ~ 2024/04',
+      subtitle: '物聯網應用開發',
+      description:
+        '廣泛學習物聯網應用相關知識及應用，包含硬體基礎、感測器應用、無線通訊技術、雲端平台與資料分析等，並進行實際專案開發。',
+      iconBg: '',
+      iconColor: '',
+      iconSvg: '',
+      iconImg: taiwanJob,
+      skills: [
+        '學習基本電學、數位邏輯',
+        '學習各式感測器模組的應用',
+        '學習Arduino的使用方式',
+        '學習Esp32的使用方式',
+        '學習硬體描述語言-Verilog',
+        '學習python的應用',
+        '學習C語言',
+        '學習基礎的App製作',
+        '學習基礎Linux應用',
+      ],
+    },
+    {
+      title: '自學遊戲開發',
+      time: '',
+      subtitle: 'Unity遊戲開發',
+      description:
+        '自學 Unity 引擎，用以開發各類 2D RPG 遊戲，包含各類常見的遊戲系統設計， 如戰鬥系統、物品系統、商店系統等......',
+      iconBg: 'bg-yellow-100',
+      iconColor: 'text-purple-600',
+      iconSvg: '',
+      iconImg: unityLogo,
+      skills: [
+        'Unity + C# 遊戲開發',
+        '遊戲系統設計與實作',
+        'UI/UX 設計',
+        '遊戲企劃與腳本撰寫',
+        '音效控制',
+        '動畫設計',
+        '專案管理',
+      ],
+    },
+    {
+      title: '自學遊戲開發',
+      time: '',
+      subtitle: 'Cocos2D遊戲開發',
+      description:
+        '自學 Cocos2D 引擎，用以開發各類 2D 遊戲，包含常見輕量小遊戲......',
+      iconBg: 'bg-purple-100',
+      iconColor: 'text-purple-600',
+      iconSvg: '',
+      iconImg: cocosLogo,
+      skills: [
+        'typeScript + Cocos 遊戲開發',
+        '遊戲系統設計與實作',
+        '團隊協作',
+        '專案管理',
+      ],
+    },
+    // {
+    //   title: '自學遊戲開發',
+    //   time: '2023/08 ~ 2023/11',
+    //   subtitle: '專案-武士地下城',
+    //   description:
+    //     '使用 Unity 引擎開發的 2D RPG 遊戲，包含完整的遊戲系統設計， 如戰鬥系統、物品系統、商店系統等。',
+    //   iconBg: 'bg-purple-100',
+    //   iconColor: 'text-purple-600',
+    //   iconSvg:
+    //     'M12 2C8.5 2 6 4.5 6 8v2c0 1.5.5 3 1.5 4L6 16v4c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-4l-1.5-2c1-1 1.5-2.5 1.5-4V8c0-3.5-2.5-6-6-6zm-2 8c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm-2 4c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2z',
+    //   iconImg: '',
+    //   skills: [
+    //     'Unity + C# 遊戲開發',
+    //     '遊戲系統設計與實作',
+    //     'UI/UX 設計',
+    //     '遊戲企劃與腳本撰寫',
+    //   ],
+    // },
+    // {
+    //   title: '全端網站開發',
+    //   time: '2019/08',
+    //   subtitle: '刑事筆記平台',
+    //   description:
+    //     '建立完整的內容管理系統，包含前後端開發、資料庫設計、API 設計等， 提供使用者友善的學習筆記分享平台。',
+    //   iconBg: 'bg-green-100',
+    //   iconColor: 'text-green-600',
+    //   iconSvg: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+    //   iconImg: '',
+    //   skills: [
+    //     '使用 PHP + MySQL 建置後端系統',
+    //     'Bootstrap + jQuery 前端框架',
+    //     'API 設計與串接',
+    //     'RWD 響應式設計',
+    //   ],
+    // },
+    {
       title: '職訓局-網頁前端課程',
-      time: '108/05 ~ 108/09',
+      time: '2019/05 ~ 2019/09',
       subtitle: '基礎網頁訓練',
       description:
         '系統性學習網頁架構，專注於前端開發，並涵蓋基礎資料庫及後端應用的基本知識。',
@@ -74,52 +179,5 @@
         '學習vue',
       ],
     },
-    // {
-    //   title: '網頁開發專案',
-    //   time: '',
-    //   subtitle: '一頁式網站、企業官網開發',
-    //   description:
-    //     '開發響應式網頁應用程式，使用現代前端技術如 Vue.js、Tailwind CSS， 並實現 RWD 設計，確保在各種裝置上都有良好的使用體驗。',
-    //   iconBg: 'bg-blue-100',
-    //   iconColor: 'text-blue-600',
-    //   icon: `<path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z" clip-rule="evenodd"></path>`,
-    //   skills: [
-    //     '使用 Tailwind CSS 與傳統 CSS 兩種方式進行切版',
-    //     '實現響應式設計，支援多種裝置',
-    //     '優化網站效能與使用者體驗',
-    //   ],
-    // },
-    // {
-    //   title: '全端網站開發',
-    //   time: '',
-    //   subtitle: '刑事筆記平台',
-    //   description:
-    //     '建立完整的內容管理系統，包含前後端開發、資料庫設計、API 設計等， 提供使用者友善的學習筆記分享平台。',
-    //   iconBg: 'bg-green-100',
-    //   iconColor: 'text-green-600',
-    //   icon: `<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>`,
-    //   skills: [
-    //     '使用 PHP + MySQL 建置後端系統',
-    //     'Bootstrap + jQuery 前端框架',
-    //     'API 設計與串接',
-    //     'RWD 響應式設計',
-    //   ],
-    // },
-    // {
-    //   title: '遊戲開發專案',
-    //   time: '',
-    //   subtitle: '武士地下城',
-    //   description:
-    //     '使用 Unity 引擎開發的 2D RPG 遊戲，包含完整的遊戲系統設計， 如戰鬥系統、物品系統、商店系統等。',
-    //   iconBg: 'bg-purple-100',
-    //   iconColor: 'text-purple-600',
-    //   icon: `<path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>`,
-    //   skills: [
-    //     'Unity + C# 遊戲開發',
-    //     '遊戲系統設計與實作',
-    //     'UI/UX 設計',
-    //     '遊戲企劃與腳本撰寫',
-    //   ],
-    // },
   ]);
 </script>

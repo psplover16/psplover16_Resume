@@ -4,7 +4,9 @@
       <!-- 頁面標題 -->
       <div class="text-center mb-16">
         <h1 class="section-title font-heading">作品集</h1>
-        <p class="text-xl text-gray-600 font-sans">展示我的開發作品與創意專案</p>
+        <p class="text-xl text-gray-600 font-sans">
+          展示我的開發作品與創意專案
+        </p>
       </div>
 
       <!-- 分類篩選 -->

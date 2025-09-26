@@ -138,5 +138,3 @@
     img.src = personalStore.personalInfo.avatar;
   };
 </script>
-
-

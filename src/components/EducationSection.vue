@@ -68,7 +68,7 @@
   // 教育背景數據
   const education = ref({
     school: '銘傳大學',
-    period: '2018 - 2022',
+    period: '2012 - 2017',
     degree: '企業管理學系 及 法律學系 雙主修 學士學位',
     logo: mcuLogo,
     description:

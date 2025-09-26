@@ -55,7 +55,8 @@ export const usePersonalStore = defineStore('personal', {
         title: '一頁式網站',
         category: 'web-development',
         period: '近期作品',
-        description: '用兩種不同方式切版，並且針對手機有不同的切版。採用響應式設計，確保在各種設備上都有良好的用戶體驗。',
+        description:
+          '用兩種不同方式切版，並且針對手機有不同的切版。採用響應式設計，確保在各種設備上都有良好的用戶體驗。',
         technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'RWD'],
         image: '/assets/img/projects/onepage-website.svg',
         demoUrl: 'https://psplover16.github.io/FubanTest/dist/#/',
@@ -72,7 +73,8 @@ export const usePersonalStore = defineStore('personal', {
         title: '宇禾官網',
         category: 'web-development',
         period: '商業專案',
-        description: '宇禾形象官網開發專案，提供完整的企業形象展示功能。包含內容管理系統，讓客戶能輕鬆管理網站內容。',
+        description:
+          '宇禾形象官網開發專案，提供完整的企業形象展示功能。包含內容管理系統，讓客戶能輕鬆管理網站內容。',
         technologies: ['HTML', 'CSS', 'JavaScript', 'PHP'],
         image: '/assets/img/projects/yuhe-official.svg',
         demoUrl: 'http://220.128.133.15/s1080209/fia/Offical/',
@@ -84,7 +86,8 @@ export const usePersonalStore = defineStore('personal', {
         title: '刑事筆記',
         category: 'web-development',
         period: '學習專案',
-        description: '分享大學時期學習刑法的心得。主要利用MySQL、API串接、php、bootstrap、js、jq建置，且具RWD功能。提供完整的學習筆記管理功能。',
+        description:
+          '分享大學時期學習刑法的心得。主要利用MySQL、API串接、php、bootstrap、js、jq建置，且具RWD功能。提供完整的學習筆記管理功能。',
         technologies: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript', 'jQuery'],
         image: '/assets/img/projects/law-notes.svg',
         demoUrl: 'http://220.128.133.15/s1080209/roc/law/',
@@ -101,7 +104,8 @@ export const usePersonalStore = defineStore('personal', {
         title: '武士地下城',
         category: 'game-development',
         period: '遊戲開發',
-        description: '打寶遊戲，具備完整的遊戲系統包含裝備、技能、探索等功能。使用Unity引擎開發，提供沉浸式的遊戲體驗。',
+        description:
+          '打寶遊戲，具備完整的遊戲系統包含裝備、技能、探索等功能。使用Unity引擎開發，提供沉浸式的遊戲體驗。',
         technologies: ['Unity', 'C#', 'Game Development'],
         image: '/assets/img/projects/samurai-dungeon.svg',
         demoUrl: 'http://220.128.133.15/s1080209/unity/web/dungeon1/',
@@ -119,7 +123,8 @@ export const usePersonalStore = defineStore('personal', {
         title: 'Canvas 特效集合',
         category: 'canvas-effects',
         period: '特效練習',
-        description: '各種 Canvas 特效的實作練習，包含粒子效果、水波特效等。展示了HTML5 Canvas的強大功能與創意應用可能性。',
+        description:
+          '各種 Canvas 特效的實作練習，包含粒子效果、水波特效等。展示了HTML5 Canvas的強大功能與創意應用可能性。',
         technologies: ['HTML5 Canvas', 'JavaScript', 'CSS3'],
         image: '/assets/img/projects/canvas-effects.svg',
         demoUrl: 'https://psplover16.github.io/',
@@ -158,6 +163,7 @@ export const usePersonalStore = defineStore('personal', {
 
       // 其他技術
       { name: 'Unity', level: 70, category: 'other' },
+      { name: 'Cococs', level: 60, category: 'other' },
       { name: 'C#', level: 65, category: 'other' },
     ],
   }),
@@ -199,9 +205,9 @@ export const usePersonalStore = defineStore('personal', {
         'JavaScript',
         'Unity',
         'PHP',
-        'Git'
+        'Git',
       ];
-      
+
       // 按照指定順序返回技能，如果找不到則跳過
       return featuredSkillNames
         .map(name => state.skills.find(skill => skill.name === name))

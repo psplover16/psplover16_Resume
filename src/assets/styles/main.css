@@ -12,18 +12,30 @@
 
   body {
     @apply bg-gray-50 text-gray-900 font-sans;
-    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1,
+      'calt' 1;
   }
 
   /* 標題字體優化 */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
-    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1,
+      'calt' 1;
     letter-spacing: -0.025em;
   }
 
   /* 代碼字體 */
-  code, pre {
+  code,
+  pre {
     @apply font-mono;
   }
 

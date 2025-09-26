@@ -29,16 +29,16 @@ export default {
       },
       fontFamily: {
         // 主要字體 - Noto Sans TC 適合中文
-        'sans': ['Noto Sans TC', 'Inter', 'system-ui', 'sans-serif'],
-        
+        sans: ['Noto Sans TC', 'Inter', 'system-ui', 'sans-serif'],
+
         // 英文專用字體 - Inter 現代簡潔
-        'inter': ['Inter', 'system-ui', 'sans-serif'],
-        
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+
         // 標題字體 - Poppins 具有個性
-        'heading': ['Poppins', 'Noto Sans TC', 'system-ui', 'sans-serif'],
-        
+        heading: ['Poppins', 'Noto Sans TC', 'system-ui', 'sans-serif'],
+
         // 等寬字體 - JetBrains Mono 適合程式碼
-        'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
+        mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

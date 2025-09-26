@@ -8,7 +8,10 @@
       </div>
 
       <!-- 技能統計卡片 -->
-      <div id="skill-stats-section" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div
+        id="skill-stats-section"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+      >
         <div
           v-for="category in skillCategories"
           :key="category.id"
@@ -26,7 +29,11 @@
               <p class="text-2xl font-bold">{{ category.count }}</p>
             </div>
             <div class="bg-white/20 p-3 rounded-lg">
-              <svg class="w-6 h-6 transition-all duration-300 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+              <svg
+                class="w-6 h-6 transition-all duration-300 group-hover:animate-bounce"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
                 <path
                   fill-rule="evenodd"
                   :d="category.iconPath"
@@ -62,11 +69,13 @@
             </svg>
           </div>
           <!-- 可點擊的標題，添加反向滾動功能 -->
-          <div 
+          <div
             class="cursor-pointer hover:opacity-70 transition-opacity duration-300"
             @click="scrollToSection('skill-stats')"
           >
-            <h2 class="text-2xl font-heading font-bold text-gray-800">{{ category.name }}</h2>
+            <h2 class="text-2xl font-heading font-bold text-gray-800">
+              {{ category.name }}
+            </h2>
             <p class="text-gray-600">{{ category.description }}</p>
           </div>
         </div>
@@ -141,7 +150,8 @@
         bgColor: 'bg-blue-100',
         iconColor: 'text-blue-600',
         skills: personalStore.skillsByCategory('frontend'),
-        iconPath: 'M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z'
+        iconPath:
+          'M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z',
       },
       {
         id: 'backend',
@@ -152,7 +162,8 @@
         bgColor: 'bg-green-100',
         iconColor: 'text-green-600',
         skills: personalStore.skillsByCategory('backend'),
-        iconPath: 'M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z'
+        iconPath:
+          'M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z',
       },
       {
         id: 'database',
@@ -163,7 +174,8 @@
         bgColor: 'bg-purple-100',
         iconColor: 'text-purple-600',
         skills: personalStore.skillsByCategory('database'),
-        iconPath: 'M3 4a1 1 0 000 2h.01a1 1 0 100-2H3zm3 0a1 1 0 000 2h10a1 1 0 100-2H6zm3 6a1 1 0 000 2h.01a1 1 0 100-2H9zm3 0a1 1 0 000 2h4a1 1 0 100-2h-4zm3 6a1 1 0 000 2h.01a1 1 0 100-2H15zm3 0a1 1 0 000 2h4a1 1 0 100-2h-4z'
+        iconPath:
+          'M3 4a1 1 0 000 2h.01a1 1 0 100-2H3zm3 0a1 1 0 000 2h10a1 1 0 100-2H6zm3 6a1 1 0 000 2h.01a1 1 0 100-2H9zm3 0a1 1 0 000 2h4a1 1 0 100-2h-4zm3 6a1 1 0 000 2h.01a1 1 0 100-2H15zm3 0a1 1 0 000 2h4a1 1 0 100-2h-4z',
       },
       {
         id: 'tools',
@@ -174,7 +186,8 @@
         bgColor: 'bg-orange-100',
         iconColor: 'text-orange-600',
         skills: personalStore.skillsByCategory('tools'),
-        iconPath: 'M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z'
+        iconPath:
+          'M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z',
       },
       {
         id: 'other',
@@ -185,20 +198,21 @@
         bgColor: 'bg-indigo-100',
         iconColor: 'text-indigo-600',
         skills: personalStore.skillsByCategory('other'),
-        iconPath: 'M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z'
-      }
+        iconPath:
+          'M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z',
+      },
     ];
 
     return categories.map(category => ({
       ...category,
-      count: category.skills.length
+      count: category.skills.length,
     }));
   });
 
   // 滑動到指定區域的函數
   const scrollToSection = sectionId => {
     let targetElement;
-    
+
     // 如果是滾動回統計區域，使用 skill-stats-section ID
     if (sectionId === 'skill-stats') {
       targetElement = document.getElementById('skill-stats-section');
@@ -206,7 +220,7 @@
       // 其他情況滾動到技能詳細區域
       targetElement = document.getElementById(`${sectionId}-section`);
     }
-    
+
     if (targetElement) {
       const offsetTop = targetElement.offsetTop - 100; // 減去100px作為頂部間距
       window.scrollTo({
