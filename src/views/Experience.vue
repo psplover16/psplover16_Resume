@@ -1,23 +1,25 @@
 <template>
-  <div class="min-h-screen bg-gray-50 py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen bg-gray-50 py-4 sm:py-8 lg:py-12 overflow-x-hidden">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full">
       <!-- 頁面標題 -->
-      <div class="text-center mb-16">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">工作經歷</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      <div class="text-center mb-12 sm:mb-16">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          工作經歷
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
           我的職業發展歷程，展示我在不同公司和專案中累積的經驗與技能
         </p>
       </div>
 
       <!-- 經歷時間軸 -->
-      <div class="relative">
-        <!-- 時間軸線條 -->
+      <div class="relative w-full">
+        <!-- 時間軸線條 - 響應式調整 -->
         <div
-          class="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-200 transform md:-translate-x-px"
+          class="absolute left-3 sm:left-5 lg:left-1/2 top-0 bottom-0 w-0.5 bg-primary-200 transform lg:-translate-x-px hidden lg:inline-block"
         ></div>
 
         <!-- 經歷項目 -->
-        <div class="space-y-12">
+        <div class="space-y-8 sm:space-y-12 w-full">
           <ExperienceItem
             v-for="(experience, index) in workExperience"
             :key="experience.id"
@@ -89,7 +91,9 @@
           <p class="text-gray-600 mt-4">隨著工作經驗累積而不斷精進的技術技能</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 w-full"
+        >
           <!-- 前端開發 -->
           <div class="card-fixed-height hover:shadow-xl transition-shadow">
             <div class="text-center mb-6">
